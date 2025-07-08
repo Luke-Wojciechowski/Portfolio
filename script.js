@@ -225,7 +225,7 @@ const platformDefinitions = [
     screenshots: ['./resource/img/johnny1.avif', './resource/img/johnny2.avif', './resource/img/johnny3.avif']
   },
   {
-    x: 6000,
+    x: 6030,
     y: 300,
     w: 260,
     h: 120,
@@ -256,7 +256,40 @@ const platformDefinitions = [
     description: 'Mine asteroids in space!',
     platforms: ['Steam', 'Xbox One'],
     screenshots: ['./resource/img/sausagewars1.avif', './resource/img/sausagewars2.avif', './resource/img/sausagewars3.avif']
-  }
+  },
+  {
+    x: 430,
+    y: 310,
+    w: 260,
+    h: 120,
+    image: './resource/img/ci.jpg',
+    title: 'Chaos Islands',
+    description: 'Mine asteroids in space!',
+    platforms: ['Steam'],
+    screenshots: ['./resource/img/ci1.jpg', './resource/img/ci2.jpg', './resource/img/ci3.jpg']
+  },  
+  {
+    x: 7230,
+    y: 260,
+    w: 260,
+    h: 120,
+    image: './resource/img/candy.png',
+    title: 'Candy go home',
+    description: 'Mine asteroids in space!',
+    platforms: ['PC - itch.io'],
+    screenshots: ['./resource/img/candy1.png', './resource/img/candy2.png', './resource/img/candy3.png']
+  },
+  {
+    x: 7630,
+    y: 280,
+    w: 260,
+    h: 120,
+    image: './resource/img/table.png',
+    title: 'Tabletop Fusion',
+    description: 'Mine asteroids in space!',
+    platforms: ['PC - itch.io'],
+    screenshots: ['./resource/img/table1.png', './resource/img/table2.png']
+  },
 ];
 
 function recalculatePositions() {
