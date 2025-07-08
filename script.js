@@ -522,6 +522,21 @@ function drawPlayer() {
 
 // Image cache to prevent flickering
 const imageCache = {};
+// Screenshot cache to preload screenshots
+const screenshotCache = {};
+
+// Preload all screenshots at startup
+platformDefinitions.forEach(def => {
+  if (def.screenshots && def.screenshots.length > 0) {
+    def.screenshots.forEach(src => {
+      if (!screenshotCache[src]) {
+        const img = new Image();
+        img.src = src;
+        screenshotCache[src] = img;
+      }
+    });
+  }
+});
 
 function drawPlatforms() {
   platforms.forEach(p => {
