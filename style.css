@@ -103,6 +103,29 @@ html, body {
   margin-top: 50px;
 }
 
+#game-list {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-bottom: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: #2196f3 #23232e;
+}
+#game-list::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+#game-list::-webkit-scrollbar-thumb {
+  background: #23232e;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+#game-list::-webkit-scrollbar-thumb:hover {
+  background: #2196f3;
+}
+#game-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -263,7 +286,7 @@ html, body {
 .gallery-screenshots {
   display: flex;
   gap: 15px;
-  overflow-x: auto;
+  overflow-x: hidden;
   padding: 10px 0;
 }
 
@@ -280,7 +303,7 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Responsive design for gallery */
+
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);

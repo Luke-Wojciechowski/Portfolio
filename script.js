@@ -34,7 +34,8 @@ const platformDefinitions = [
     image: './resource/img/start.png',
     title: 'Łukasz Wojciechowski',
     description: 'This is the starting platform.',
-    platforms: ['Starting One :D'],
+    platforms: ['Poland'],
+    contributions: "",
     screenshots: []
   },
   {
@@ -44,7 +45,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/astrominer.jpg',
     title: 'Astro Miner',
-    description: 'Astro Miner',
+    description: 'Explore alien planets and mine valuable crystals using a vacuum gun in this colorful space adventure. Upgrade your gear, use power-ups, and play solo or in co-op mode to get rich and uncover ancient fossils with unique bonuses.',
+    contributions: "I optimized the game for better performance and implemented a new multiplayer co-op mode. I also worked on a DLC expansion, redesigned the user interface, and fixed numerous bugs. Additionally, I handled integration with various platforms",
     platforms: ['Steam', 'Nintendo Switch'],
     screenshots: ['./resource/img/astrominer1.avif', './resource/img/astrominer2.avif']
   },
@@ -55,7 +57,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/bridgerace.avif',
     title: 'Bridge Race',
-    description: 'Solve puzzles and win!',
+    description: 'Collect bricks, build your bridge, and race to the finish while customizing your character and competing in exciting multiplayer challenges.',
+    contributions: "I worked on UI design, core gameplay mechanics, and DLC content. Additionally, I optimized visuals and performance for smoother gameplay across devices.",
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/bridgerace1.avif', './resource/img/bridgerace2.avif', './resource/img/bridgerace3.avif']
   },
@@ -66,7 +69,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/bucketcrusher.avif',
     title: 'Bucket Crusher',
-    description: 'Mine asteroids in space!',
+    description: 'Crush walls brick by brick using a powerful saw, upgrade your machine, and enjoy the satisfying destruction in this addictive casual game.',
+    contributions: "I created the UI, improved core gameplay elements, and supported the development of DLC content. I also handled bug fixing to ensure a more stable experience",
     platforms: ['Steam', 'PlayStation', 'Nintendo Switch'],
     screenshots: ['./resource/img/bucketcrusher1.avif', './resource/img/bucketcrusher2.avif']
   },
@@ -77,7 +81,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/crowdcity.avif',
     title: 'Crowd City',
-    description: 'Mine asteroids in space!',
+    description: 'Lead a growing crowd through the city, absorb smaller groups, and avoid being swallowed by larger ones in this fun and fast-paced game.',
+    contributions: "I optimized game performance and improved stability through bug fixing. I also collaborated in a 3-person team to enhance the UI and overall user experience",
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/crowdcity1.avif', './resource/img/crowdcity2.avif']
   },
@@ -88,7 +93,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/bridghtside.avif',
     title: 'Bright Side: Quiz',
-    description: 'Mine asteroids in space!',
+    description: 'An educational quiz game full of trivia, visuals, and fun modes, letting players explore the planet and beyond while competing with friends.',
+    contributions: "As lead programmer, I developed the UI, gameplay, all quiz modes, animations, VFX (particles), and handled database integration and system design.",
     platforms: ['PlayStation', 'Xbox One', 'Nintendo Switch'],
     screenshots: ['./resource/img/bridghtside1.avif', './resource/img/bridghtside2.avif', './resource/img/bridghtside3.avif']
   },
@@ -99,7 +105,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/shoppingmall.avif',
     title: 'Shopping Mall Girl',
-    description: 'Mine asteroids in space!',
+    description: "Step into a glamorous shopping mall and dress up in the latest fashion trends to become a runway star. Compete in fashion battles, get styling tips, and enjoy a fabulous shopping adventure!",
+    contributions: "I handled the porting process, including UI, gameplay systems, and DLC integration.",
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/shoppingmall1.avif', './resource/img/shoppingmall2.avif', './resource/img/shoppingmall3.avif']
   },
@@ -110,7 +117,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/startrek.avif',
     title: 'Star Trek: Legends',
-    description: 'Mine asteroids in space!',
+     description: 'Assemble your crew of iconic Star Trek characters and command the U.S.S. Artemis in this strategy-based RPG. Battle through turn-based missions, shape the story with your choices, and explore a richly detailed 3D universe.',
+    contributions: 'As part of a 4-person team, I focused on performance optimization, visual improvements, and bug fixing. I also contributed to localization, helping the game reach a wider international audience.',
     platforms: ['Nintendo Switch', 'Xbox One', 'PlayStation'],
     screenshots: ['./resource/img/startrek1.avif', './resource/img/startrek2.avif', './resource/img/startrek3.avif']
   },
@@ -121,7 +129,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/neon.avif',
     title: 'Neon On!',
-    description: 'Mine asteroids in space!',
+    description: 'Untangle and connect vibrant neon cables to their matching sockets to light up stunning animated signs. Solve color-matching puzzles across dynamic levels full of interactive obstacles like lasers and rotating boxes.',
+    contributions: 'I ported the game, implemented new shaders for improved visuals, and integrated additional puzzles and 3D models. I also redesigned UI elements and ensured seamless functionality across platforms.',
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/neon1.avif', './resource/img/neon2.avif']
   },
@@ -132,7 +141,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/parking.avif',
     title: 'Parking Jam',
-    description: 'Mine asteroids in space!',
+    description: 'Clear crowded parking lots by moving vehicles strategically across five challenging game modes. Use powerups, unlock maps, and show off your puzzle-solving skills in local multiplayer or solo.',
+    contributions: 'I worked on UI development, bug fixing, and implemented new gameplay modes including multiplayer. I also helped design new maps and supported content updates through DLC integration.',
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/parking1.avif', './resource/img/parking2.avif']
   },
@@ -143,7 +153,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/paper.avif',
     title: 'Paper io 2',
-    description: 'Mine asteroids in space!',
+    description: 'Claim territory by painting over the map in fast-paced solo or multiplayer matches for up to 8 players. Outsmart opponents and dominate dozens of unique maps while avoiding elimination.',
+    contributions: 'I contributed to performance improvements and technical stability. My work included resolving a critical memory issue, which significantly improved long-session performance without altering gameplay.',
     platforms: ['PlayStation'],
     screenshots: ['./resource/img/paper1.avif', './resource/img/paper2.avif']
   },
@@ -154,7 +165,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/omnom.avif',
     title: 'Om Nom: Run 2',
-    description: 'Mine asteroids in space!',
+    description: 'Race through obstacle-filled environments as Om Nom in this fast-paced arcade runner. Outspeed rivals, dodge traps, and find the quickest paths to victory across vibrant, animated tracks.',
+    contributions: 'I initiated the game’s port and built the core porting structure used by the team. I also refactored and improved the project architecture to streamline development and make future contributions easier for other programmers.',
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/omnom1.avif', './resource/img/omnom2.avif', './resource/img/omnom3.avif']
   },
@@ -165,7 +177,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/nails.avif',
     title: 'Acrylic Nails!',
-    description: 'Mine asteroids in space!',
+    description: 'Create dazzling nail art using a wide variety of polishes, stencils, and accessories in your own beauty salon. Shape, paint, and decorate to satisfy clients and earn top ratings.',
+    contributions: 'I ported the game to PS4 and built custom tools to replace Unity SDK features unavailable on the platform. This included implementing missing functionality using the native PlayStation SDK and adapting UI and input systems for console.',
     platforms: ['PlayStation'],
     screenshots: ['./resource/img/nails1.avif', './resource/img/nails2.avif']
   },
@@ -176,7 +189,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/notnot.avif',
     title: 'Not Not - A Brain Buster',
-    description: 'Mine asteroids in space!',
+    description: 'Challenge your brain in this fast-paced logic puzzle game packed with misleading instructions and mind-bending twists, now with multiplayer on Nintendo Switch.',
+    contributions: 'I was responsible for bug fixing,focusing on gameplay stability and edge-case crashes.',
     platforms: ['Microsoft Store', 'Xbox One'],
     screenshots: ['./resource/img/notnot1.avif', './resource/img/notnot2.avif']
   },
@@ -187,7 +201,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/maze.avif',
     title: 'Multi Maze 3D',
-    description: 'Mine asteroids in space!',
+    description: 'Guide colorful balls through twisty mazes and multiplier gates to fill the cup. Spin your way through levels packed with boosters, skins, and satisfying ball physics.',
+    contributions: 'I optimized the game significantly, increasing performance. Improvements focused on rendering efficiency and memory use.',
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/maze1.avif', './resource/img/maze2.avif']
   },
@@ -198,7 +213,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/zoombie.avif',
     title: 'Zombie Defense',
-    description: 'Mine asteroids in space!',
+    description: 'Defend your base from endless zombie hordes using weapons, traps, turrets, and even tanks. Play solo or with a friend in chaotic co-op mode across multiple locations.',
+    contributions: 'I handled the console port, including UI, gameplay systems, co-op mode, localization, and balance tuning. I also ensured platform compliance and optimized performance across modes.',
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/zoombie1.avif', './resource/img/zoombie2.avif', './resource/img/zoombie3.avif']
   },
@@ -209,7 +225,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/chef.avif',
     title: 'MasterChef: Learn to Cook!',
-    description: 'Mine asteroids in space!',
+    description: 'Step into the kitchen and prove yourself in MasterChef: Learn to Cook! Play fun cooking mini-games, master over 120 global recipes, customize your chef, and take on culinary challenges judged by the iconic MasterChef panel.',
+    contributions: 'Collaborated in a 4-person team to implement UI features, gameplay improvements, and localization. Also handled key bug fixes and helped polish the overall user experience.',
     platforms: ['PlayStation', 'Nintendo Switch', 'Xbox One'],
     screenshots: ['./resource/img/chef1.avif', './resource/img/chef2.avif', './resource/img/chef3.avif']
   },
@@ -220,7 +237,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/johnny.avif',
     title: 'Johnny Trigger',
-    description: 'Mine asteroids in space!',
+    description: 'Take down the mafia in this stylish, fast-paced action shooter. Flip, slide, and blast your way through short, high-impact levels as Johnny Trigger — the ultimate action hero.',
+    contributions: 'Handled the full PC/Steam port, adapting controls and performance for desktop play. Added multi-language support and implemented localization across all UI and gameplay elements.',
     platforms: ['Steam'],
     screenshots: ['./resource/img/johnny1.avif', './resource/img/johnny2.avif', './resource/img/johnny3.avif']
   },
@@ -232,6 +250,7 @@ const platformDefinitions = [
     image: './resource/img/hole.avif',
     title: 'Hole io',
     description: 'Mine asteroids in space!',
+    contributions: 'I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.',
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/hole1.avif', './resource/img/hole2.avif']
   },
@@ -242,7 +261,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/farm.avif',
     title: 'Farm It',
-    description: 'Mine asteroids in space!',
+    description: 'Build and manage your dream farm in this relaxing simulation game. Grow crops, care for animals, cook meals, and sell your goods—all while customizing your farmer and surroundings.',
+    contributions: 'Improved gameplay mechanics and visual polish while optimizing performance. Enhanced physics and graphics to deliver smoother farming interactions.',
     platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/farm1.avif', './resource/img/farm2.avif', './resource/img/farm3.avif']
   },
@@ -253,7 +273,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/sausagewars.avif',
     title: 'Sausage Wars',
-    description: 'Mine asteroids in space!',
+    description: 'An over-the-top party brawler for up to 4 players and 20 bots where sausages clash in brutal kitchen battles! Head-butt, push, and outmaneuver your enemies into deadly traps—from knife racks to blazing stoves—in a fight for sausage supremacy.',
+    contributions: 'Handled critical bug fixing and stability improvements across multiplayer and physics systems.',
     platforms: ['Steam', 'Xbox One'],
     screenshots: ['./resource/img/sausagewars1.avif', './resource/img/sausagewars2.avif', './resource/img/sausagewars3.avif']
   },
@@ -264,7 +285,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/ci.jpg',
     title: 'Chaos Islands',
-    description: 'Mine asteroids in space!',
+    description: 'One of the leading architecture design using a custom ECS framework (Sirex ECS). Developed core gameplay mechanics, tools including enemy systems, part of the construction/building logic, card systems, and gamepad input. Also contributed to game design and production strategy.',
+    contributions: 'Handled critical bug fixing and stability improvements across multiplayer and physics systems.',
     platforms: ['Steam'],
     screenshots: ['./resource/img/ci1.jpg', './resource/img/ci2.jpg', './resource/img/ci3.jpg']
   },  
@@ -275,7 +297,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/candy.png',
     title: 'Candy go home',
-    description: 'Mine asteroids in space!',
+      description: 'A quirky first-person shooter where you play as a sentient piece of trash candy fighting waves of enemies across surreal environments. Battle to survive and progress through increasingly challenging stages.',
+    contributions: 'Designed and implemented enemy behaviors, wave progression systems, and player feedback loops. Also handled character and enemy animations and level pacing.',
     platforms: ['PC - itch.io'],
     screenshots: ['./resource/img/candy1.png', './resource/img/candy2.png', './resource/img/candy3.png']
   },
@@ -286,7 +309,8 @@ const platformDefinitions = [
     h: 120,
     image: './resource/img/table.png',
     title: 'Tabletop Fusion',
-    description: 'Mine asteroids in space!',
+    description: 'A card fusion game where players combine base cards to create powerful new ones and trade them for currency. Complete quests, discover rare recipes, and build the ultimate deck.',
+    contributions: 'Designed the game concept and systems, implemented the card fusion (recipe) mechanic, developed the quest system, and contributed to game art and UI layout.',
     platforms: ['PC - itch.io'],
     screenshots: ['./resource/img/table1.png', './resource/img/table2.png']
   },
@@ -716,47 +740,252 @@ document.getElementById("x").addEventListener("click",()=>{
 const galleryGameData = {
   crowdcity: {
     title: "Crowd City",
-    description: "A strategic city-building game where you manage resources and grow your population. Navigate through challenging scenarios and build the ultimate metropolis.",
+    description: "Lead a growing crowd through the city, absorb smaller groups, and avoid being swallowed by larger ones in this fun and fast-paced game.",
     contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
-    platforms: ["Nintendo Switch", "Mobile"],
+    platforms: ["Nintendo Switch"],
+    platformLinks: {
+      "Nintendo Switch": "https://www.nintendo.com/us/store/products/crowd-city-switch/",
+    },
     screenshots: ['./resource/img/crowdcity1.avif', './resource/img/crowdcity2.avif']
   },
   astrominer: {
     title: "Astro Miner",
-    description: "Explore the vastness of space while mining valuable resources from asteroids. Upgrade your mining equipment and discover rare materials in this space adventure.",
-    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
+    description: "Explore alien planets and mine valuable crystals using a vacuum gun in this colorful space adventure. Upgrade your gear, use power-ups, and play solo or in co-op mode to get rich and uncover ancient fossils with unique bonuses.",
+    contributions: "I optimized game performance and improved stability through bug fixing. I also collaborated in a 3-person team to enhance the UI and overall user experience",
     platforms: ["Steam", "Nintendo Switch"],
+    platformLinks: {
+      "Steam": "https://store.steampowered.com/app/2751340/Astro_Miner/",
+      "Nintendo Switch": "https://www.nintendo.com/us/store/products/astro-miner-switch/"
+    },
     screenshots: ['./resource/img/astrominer1.avif', './resource/img/astrominer2.avif']
   },
   bridgerace: {
     title: "Bridge Race",
-    description: "Test your engineering skills in this puzzle game. Build bridges, solve complex challenges, and race against time to complete each level.",
-    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
+    description: "Collect bricks, build your bridge, and race to the finish while customizing your character and competing in exciting multiplayer challenges.",
+    contributions: "I worked on UI design, core gameplay mechanics, and DLC content. Additionally, I optimized visuals and performance for smoother gameplay across devices.",
     platforms: ["Nintendo Switch"],
+    platformLinks: {
+      "Nintendo Switch": "https://www.nintendo.com/us/store/products/bridge-race-switch/"
+    },
     screenshots: ['./resource/img/bridgerace1.avif', './resource/img/bridgerace2.avif', './resource/img/bridgerace3.avif']
   },
   bucketcrusher: {
     title: "Bucket Crusher",
-    description: "A physics-based puzzle game where you crush buckets and solve intricate mechanical challenges. Use strategy and timing to master each level.",
-    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
+    description: "Crush walls brick by brick using a powerful saw, upgrade your machine, and enjoy the satisfying destruction in this addictive casual game.",
+    contributions: "I created the UI, improved core gameplay elements, and supported the development of DLC content. I also handled bug fixing to ensure a more stable experience",
     platforms: ["Steam", "PlayStation", "Nintendo Switch"],
+    platformLinks: {
+      "Steam": "https://store.steampowered.com/app/2885230/Bucket_Crusher/",
+      "PlayStation": "https://store.playstation.com/pl-pl/product/EP2696-CUSA48344_00-0000000000000000",
+      "Nintendo Switch": "https://www.nintendo.com/us/store/products/bucket-crusher-switch/"
+    },
     screenshots: ['./resource/img/bucketcrusher1.avif', './resource/img/bucketcrusher2.avif']
   },
   brightside: {
     title: "Bright Side: Quiz",
     description: "An educational quiz game that challenges your knowledge across various subjects. Learn while having fun with interactive questions and engaging content.",
-    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
+    contributions: "As lead programmer, I developed the UI, gameplay, all quiz modes, animations, VFX (particles), and handled database integration and system design.",
     platforms: ["PlayStation", "Xbox One", "Nintendo Switch"],
+    platformLinks: {
+      "PlayStation": "https://store.playstation.com/pl-pl/product/EP2696-CUSA51841_00-0876462411869167",
+      "Xbox One": "https://www.xbox.com/en-EN/games/store/bright-side-quiz/9NWSKPZBBR6T/0010",
+      "Nintendo Switch": "https://www.nintendo.com/us/store/products/bright-side-quiz-switch/"
+    },
     screenshots: ['./resource/img/bridghtside1.avif', './resource/img/bridghtside2.avif', './resource/img/bridghtside3.avif']
   },
   shoppingmall: {
     title: "Shopping Mall Girl",
-    description: "Experience the life of a shopping mall manager in this simulation game. Manage stores, satisfy customers, and build the most successful mall.",
-    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
+    description: "Step into a glamorous shopping mall and dress up in the latest fashion trends to become a runway star. Compete in fashion battles, get styling tips, and enjoy a fabulous shopping adventure!",
+    contributions: "I handled the porting process, including UI, gameplay systems, and DLC integration.",
     platforms: ["Nintendo Switch"],
+    platformLinks: {
+      "Nintendo Switch": "https://www.nintendo.com/us/store/products/shopping-mall-girl-switch/"
+    },
     screenshots: ['./resource/img/shoppingmall1.avif', './resource/img/shoppingmall2.avif', './resource/img/shoppingmall3.avif']
   }
 };
+
+Object.assign(galleryGameData, {
+  starTrekLegends: {
+    title: 'Star Trek: Legends',
+    description: 'Assemble your crew of iconic Star Trek characters and command the U.S.S. Artemis in this strategy-based RPG. Battle through turn-based missions, shape the story with your choices, and explore a richly detailed 3D universe.',
+    contributions: 'As part of a 4-person team, I focused on performance optimization, visual improvements, and bug fixing. I also contributed to localization, helping the game reach a wider international audience.',
+    platforms: ['Nintendo Switch', 'Xbox One', 'PlayStation'],
+    platformLinks: {
+      'Nintendo Switch': 'https://www.nintendo.com/us/store/products/star-trek-legends-switch/',
+      'Xbox One': 'https://www.xbox.com/en-EN/games/store/star-trek-legends/9NSHDL2QS0KS/0010',
+      'PlayStation': 'https://store.playstation.com/pl-pl/concept/10012864'
+    },
+    screenshots: ['./resource/img/startrek1.avif', './resource/img/startrek2.avif', './resource/img/startrek3.avif']
+  },
+  neonOn: {
+    title: 'Neon On!',
+    description: 'Untangle and connect vibrant neon cables to their matching sockets to light up stunning animated signs. Solve color-matching puzzles across dynamic levels full of interactive obstacles like lasers and rotating boxes.',
+    contributions: 'I ported the game, implemented new shaders for improved visuals, and integrated additional puzzles and 3D models. I also redesigned UI elements and ensured seamless functionality across platforms.',
+    platforms: ['Nintendo Switch'],
+    platformLinks: {
+      'Nintendo Switch': 'https://www.nintendo.com/us/store/products/neon-on-switch/'
+    },
+    screenshots: ['./resource/img/neon1.avif', './resource/img/neon2.avif']
+  },
+  parkingJam: {
+    title: 'Parking Jam',
+    description: 'Clear crowded parking lots by moving vehicles strategically across five challenging game modes. Use powerups, unlock maps, and show off your puzzle-solving skills in local multiplayer or solo.',
+    contributions: 'I worked on UI development, bug fixing, and implemented new gameplay modes including multiplayer. I also helped design new maps and supported content updates through DLC integration.',
+    platforms: ['Nintendo Switch'],
+    platformLinks: {
+      'Nintendo Switch': 'https://www.nintendo.com/us/store/products/parking-jam-switch/'
+    },
+    screenshots: ['./resource/img/parking1.avif', './resource/img/parking2.avif']
+  },
+  paperIo2: {
+    title: 'Paper io 2',
+    description: 'Claim territory by painting over the map in fast-paced solo or multiplayer matches for up to 8 players. Outsmart opponents and dominate dozens of unique maps while avoiding elimination.',
+    contributions: 'I contributed to performance improvements and technical stability. My work included resolving a critical memory issue, which significantly improved long-session performance without altering gameplay.',
+    platforms: ['PlayStation'],
+    platformLinks: {
+      'PlayStation': 'https://store.playstation.com/pl-pl/concept/10009532'
+    },
+    screenshots: ['./resource/img/paper1.avif', './resource/img/paper2.avif']
+  },
+  omNomRun2: {
+    title: 'Om Nom: Run 2',
+    description: 'Race through obstacle-filled environments as Om Nom in this fast-paced arcade runner. Outspeed rivals, dodge traps, and find the quickest paths to victory across vibrant, animated tracks.',
+    contributions: 'I initiated the game’s port and built the core porting structure used by the team. I also refactored and improved the project architecture to streamline development and make future contributions easier for other programmers.',
+    platforms: ['Nintendo Switch'],
+    platformLinks: {
+      'Nintendo Switch': 'https://www.nintendo.com/store/products/om-nom-run-2-switch-dummy/'
+    },
+    screenshots: ['./resource/img/omnom1.avif', './resource/img/omnom2.avif', './resource/img/omnom3.avif']
+  },
+  acrylicNails: {
+    title: 'Acrylic Nails!',
+    description: 'Create dazzling nail art using a wide variety of polishes, stencils, and accessories in your own beauty salon. Shape, paint, and decorate to satisfy clients and earn top ratings.',
+    contributions: 'I ported the game to PS4 and built custom tools to replace Unity SDK features unavailable on the platform. This included implementing missing functionality using the native PlayStation SDK and adapting UI and input systems for console.',
+    platforms: ['PlayStation'],
+    platformLinks: {
+      'PlayStation': 'https://store.playstation.com/pl-pl/concept/10009947'
+    },
+    screenshots: ['./resource/img/nails1.avif', './resource/img/nails2.avif']
+  },
+  notNotBrainBuster: {
+    title: 'Not Not - A Brain Buster',
+    description: 'Challenge your brain in this fast-paced logic puzzle game packed with misleading instructions and mind-bending twists, now with multiplayer on Nintendo Switch.',
+    contributions: 'I was responsible for bug fixing,focusing on gameplay stability and edge-case crashes.',
+    platforms: ['Microsoft Store', 'Xbox One'],
+    platformLinks: {
+      'Microsoft Store': 'https://www.xbox.com/pl-PL/games/store/not-not-a-brain-buster/9p5v8ks3b9sw',
+      'Xbox One': 'https://www.xbox.com/pl-PL/games/store/not-not-a-brain-buster/9p5v8ks3b9sw'
+    },
+    screenshots: ['./resource/img/notnot1.avif', './resource/img/notnot2.avif']
+  },
+  multiMaze3D: {
+    title: 'Multi Maze 3D',
+    description: 'Guide colorful balls through twisty mazes and multiplier gates to fill the cup. Spin your way through levels packed with boosters, skins, and satisfying ball physics.',
+    contributions: 'I optimized the game significantly, increasing performance. Improvements focused on rendering efficiency and memory use.',
+    platforms: ['Nintendo Switch'],
+    platformLinks: {
+      'Nintendo Switch': 'https://www.nintendo.com/us/store/products/multi-maze-3d-switch/'
+    },
+    screenshots: ['./resource/img/maze1.avif', './resource/img/maze2.avif']
+  },
+  zombieDefense: {
+    title: 'Zombie Defense',
+    description: 'Defend your base from endless zombie hordes using weapons, traps, turrets, and even tanks. Play solo or with a friend in chaotic co-op mode across multiple locations.',
+    contributions: 'I handled the console port, including UI, gameplay systems, co-op mode, localization, and balance tuning. I also ensured platform compliance and optimized performance across modes.',
+    platforms: ['Nintendo Switch'],
+    platformLinks: {
+      'Nintendo Switch': 'https://www.nintendo.com/us/store/products/zombie-defense-switch/'
+    },
+    screenshots: ['./resource/img/zoombie1.avif', './resource/img/zoombie2.avif', './resource/img/zoombie3.avif']
+  },
+  masterChefLearnToCook: {
+    title: 'MasterChef: Learn to Cook!',
+    description: 'Step into the kitchen and prove yourself in MasterChef: Learn to Cook! Play fun cooking mini-games, master over 120 global recipes, customize your chef, and take on culinary challenges judged by the iconic MasterChef panel.',
+    contributions: 'Collaborated in a 4-person team to implement UI features, gameplay improvements, and localization. Also handled key bug fixes and helped polish the overall user experience.',
+    platforms: ['PlayStation', 'Nintendo Switch', 'Xbox One'],
+    platformLinks: {
+      'PlayStation': 'https://store.playstation.com/pl-pl/product/EP2696-CUSA51366_00-0000000000000000',
+      'Nintendo Switch': 'https://www.nintendo.com/us/store/products/masterchef-learn-to-cook-switch/',
+      'Xbox One': 'https://www.xbox.com/pl-PL/games/store/masterchef-learn-to-cook-complete-edition/9N4THBQ1PR79'
+    },
+    screenshots: ['./resource/img/chef1.avif', './resource/img/chef2.avif', './resource/img/chef3.avif']
+  },
+  johnnyTrigger: {
+    title: 'Johnny Trigger',
+    description: 'Take down the mafia in this stylish, fast-paced action shooter. Flip, slide, and blast your way through short, high-impact levels as Johnny Trigger — the ultimate action hero.',
+    contributions: 'Handled the full PC/Steam port, adapting controls and performance for desktop play. Added multi-language support and implemented localization across all UI and gameplay elements.',
+    platforms: ['Steam'],
+    platformLinks: {
+      'Steam': 'https://store.steampowered.com/app/2751320/Johnny_Trigger/'
+    },
+    screenshots: ['./resource/img/johnny1.avif', './resource/img/johnny2.avif', './resource/img/johnny3.avif']
+  },
+  holeIo: {
+    title: 'Hole io',
+    description: 'Become an unstoppable black hole and swallow everything in your path! Compete with friends in local multiplayer or enjoy solo chaos across a variety of maps and game modes.',
+    contributions: 'Contributed to UI enhancements, implemented a new gameplay mode, and handled bug fixing in collaboration with the team. Focused on gameplay stability and smooth multiplayer integration.',
+    platforms: ['Nintendo Switch'],
+    platformLinks: {
+      'Nintendo Switch': 'https://www.nintendo.com/us/store/products/hole-io-switch/'
+    },
+    screenshots: ['./resource/img/hole1.avif', './resource/img/hole2.avif']
+  },
+  farmIt: {
+    title: 'Farm It',
+    description: 'Build and manage your dream farm in this relaxing simulation game. Grow crops, care for animals, cook meals, and sell your goods—all while customizing your farmer and surroundings.',
+    contributions: 'Improved gameplay mechanics and visual polish while optimizing performance. Enhanced physics and graphics to deliver smoother farming interactions.',
+    platforms: ['Nintendo Switch'],
+    platformLinks: {
+      'Nintendo Switch': 'https://www.nintendo.com/us/store/products/farm-it-switch/'
+    },
+    screenshots: ['./resource/img/farm1.avif', './resource/img/farm2.avif', './resource/img/farm3.avif']
+  },
+  sausagewars: {
+    title: 'Sausage Wars',
+    description: 'An over-the-top party brawler for up to 4 players and 20 bots where sausages clash in brutal kitchen battles! Head-butt, push, and outmaneuver your enemies into deadly traps—from knife racks to blazing stoves—in a fight for sausage supremacy.',
+    contributions: 'Handled critical bug fixing and stability improvements across multiplayer and physics systems.',
+    platforms: ['Steam', 'Xbox One'],
+    platformLinks: {
+      'Steam': 'https://store.steampowered.com/app/2290210/Sausage_Wars/',
+      'Xbox One': 'https://www.xbox.com/pl-PL/games/store/sausage-wars/9NRTQ7R64DVC/0010'
+    },
+    screenshots: ['./resource/img/sausagewars1.avif', './resource/img/sausagewars2.avif', './resource/img/sausagewars3.avif']
+  },
+  chaosislands: {
+    title: 'Chaos Islands',
+    description: 'One of the leading architecture design using a custom ECS framework (Sirex ECS). Developed core gameplay mechanics, tools including enemy systems, part of the construction/building logic, card systems, and gamepad input. Also contributed to game design and production strategy.',
+    contributions: 'Handled critical bug fixing and stability improvements across multiplayer and physics systems.',
+    platforms: ['Steam'],
+    platformLinks: {
+      'Steam': 'https://store.steampowered.com/app/2891320/Chaos_Islands/',
+    },
+    screenshots: ['./resource/img/ci1.jpg', './resource/img/ci2.jpg', './resource/img/ci3.jpg']
+  },
+  tabletop: {
+    title: 'Tabletop Fusion',
+    description: 'A card fusion game where players combine base cards to create powerful new ones and trade them for currency. Complete quests, discover rare recipes, and build the ultimate deck.',
+    contributions: 'Designed the game concept and systems, implemented the card fusion (recipe) mechanic, developed the quest system, and contributed to game art and UI layout.',
+    platforms: ['PC', 'WebGL'],
+    platformLinks: {
+      'PC': 'https://vo1z.itch.io/tabletop-fusion',
+      'WebGL': 'https://vo1z.itch.io/tabletop-fusion-web',
+    },
+    screenshots: ['./resource/img/table1.png', './resource/img/table2.png']
+  },
+  candy: {
+    title: 'Candy go home',
+    description: 'A quirky first-person shooter where you play as a sentient piece of trash candy fighting waves of enemies across surreal environments. Battle to survive and progress through increasingly challenging stages.',
+    contributions: 'Designed and implemented enemy behaviors, wave progression systems, and player feedback loops. Also handled character and enemy animations and level pacing.',
+    platforms: ['PC'],
+    platformLinks: {
+      'PC': 'https://vo1z.itch.io/candy-go-home',
+    },
+    screenshots: ['./resource/img/candy1.png', './resource/img/candy2.png','./resource/img/candy3.png']
+  }
+
+  
+});
 
 // Platform icon mapping for gallery
 const platformIconMap = {
@@ -764,9 +993,10 @@ const platformIconMap = {
   'PlayStation': '<img src="https://cdn.simpleicons.org/playstation/000000/ffffff" alt="PlayStation" title="PlayStation" style="height:32px;vertical-align:middle;">',
   'Steam': '<img src="https://cdn.simpleicons.org/steam/000000/ffffff" alt="Steam" title="Steam" style="height:32px;vertical-align:middle;">',
   'Xbox One': '<img src="./resource/img/xbox-logo.png" alt="Xbox" title="Xbox" style="height:32px;vertical-align:middle;">',
-  'PC': '<i class="fa fa-desktop fa-2x" title="PC"></i>',
+  'PC': '<i class="fa fa-desktop fa-2x" title="PC" style="color:#000;"></i>',
   'Mobile': '<i class="fa-solid fa-mobile-screen fa-2x" title="Mobile"></i>',
   'Microsoft Store': '<i class="fa-brands fa-windows fa-2x" title="Microsoft Store"></i>',
+  'WebGL': '<img src="./resource/img/webgl.svg" alt="WebGL" title="WebGL" style="height:32px;vertical-align:middle;">'
 };
 
 // Gallery game info functions
@@ -784,10 +1014,15 @@ function showGalleryGameInfo(gameKey) {
   titleElement.textContent = gameData.title;
   descriptionElement.innerHTML = `${gameData.description}<br><br><span class='gallery-contributions'>${gameData.contributions || ''}</span>`;
 
-  // Set platforms as icons
-  platformsElement.innerHTML = gameData.platforms.map(platform =>
-    `<span class="platform-tag">${platformIconMap[platform] || platform}</span>`
-  ).join('');
+  // Set platforms as icons with links if available
+  platformsElement.innerHTML = gameData.platforms.map(platform => {
+    const icon = platformIconMap[platform] || platform;
+    const link = gameData.platformLinks && gameData.platformLinks[platform];
+    if (link) {
+      return `<span class="platform-tag"><a href="${link}" target="_blank" rel="noopener noreferrer" class="platform-link">${icon}</a></span>`;
+    }
+    return `<span class="platform-tag">${icon}</span>`;
+  }).join('');
 
   // Set screenshots
   screenshotsElement.innerHTML = gameData.screenshots.map(screenshot =>
