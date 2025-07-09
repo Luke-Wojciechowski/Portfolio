@@ -17,10 +17,10 @@ const player = {
   targetRotation: 0
 };
 
-const gravity = 1.5;
+const gravity = 1.5 *1000;
 const friction = 0.85;
-const moveSpeed = 1.5;
-const jumpPower = 25;
+const moveSpeed = 1.5 * 2000;
+const jumpPower = 1000;
 
 // Platformy i gry
 const platforms = [];
@@ -383,7 +383,11 @@ function drawBackground() {
   backgroundLayers.buildings.forEach(building => {
     const x = building.x - camera.x * building.speed;
     if (x > -building.w && x < canvas.width + building.w) {
-      ctx.fillStyle = building.color;
+      // Add a small vertical gradient to each building
+      const grad = ctx.createLinearGradient(x, building.y, x, building.y + building.h);
+      grad.addColorStop(0, 'hsl(' + building.color.match(/\d+/g)[0] + ', ' + building.color.match(/\d+/g)[1] + '%, ' + (parseInt(building.color.match(/\d+/g)[2]) + 10) + '%)'); // lighter at top
+      grad.addColorStop(1, building.color); // original at bottom
+      ctx.fillStyle = grad;
       ctx.fillRect(x, building.y, building.w, building.h);
       // Draw cached windows
       building.windows.forEach(win => {
@@ -583,17 +587,17 @@ function hideInfo() {
 }
 
 
-function update() {
-  if (keys["ArrowLeft"] || keys["a"] || keys["A"]) player.vx -= moveSpeed;
-  if (keys["ArrowRight"] || keys["d"] || keys["D"]) player.vx += moveSpeed;
+function update(deltaTime) {
+  if (keys["ArrowLeft"] || keys["a"] || keys["A"]) player.vx -= moveSpeed * deltaTime;
+  if (keys["ArrowRight"] || keys["d"] || keys["D"]) player.vx += moveSpeed * deltaTime;
 
-  player.vx *= friction;
-  player.vy += gravity;
+  player.vx *= Math.pow(friction, deltaTime * 60); // Friction per second (keep as is for now)
+  player.vy += gravity * deltaTime;
   
   let prevY = player.y;
   let wasOnGround = player.onGround;
-  player.x += player.vx;
-  player.y += player.vy;
+  player.x += player.vx * deltaTime;
+  player.y += player.vy * deltaTime;
 
   player.onGround = false;
   let standingPlatform = null;
@@ -645,9 +649,9 @@ function update() {
   }
   
   updateParticles();
-  const rotationSpeed = 0.18;
+  const rotationSpeed = 0.18 * 100;
   if (Math.abs(player.rotation - player.targetRotation) > 0.01) {
-    player.rotation += (player.targetRotation - player.rotation) * rotationSpeed;
+    player.rotation += (player.targetRotation - player.rotation) * rotationSpeed * deltaTime;
   } else {
     player.rotation = player.targetRotation;
   }
@@ -666,8 +670,12 @@ function draw() {
   ctx.restore();
 }
 
-function gameLoop(){
-    update();
+let lastTime = null;
+function gameLoop(now){
+    if (!lastTime) lastTime = now;
+    const deltaTime = Math.min((now - lastTime) / 1000, 0.05); 
+    lastTime = now;
+    update(deltaTime);
     draw();
     requestAnimationFrame(gameLoop);
 }
@@ -679,6 +687,24 @@ document.getElementById("start-button").addEventListener("click",()=>{
     menu.classList.add("fade-out");
     setTimeout(()=>{
         menu.style.display = "none";
-        gameLoop();
+        lastTime = null;
+        requestAnimationFrame(gameLoop);
     },1000);
+});
+
+document.getElementById("show-list-button").addEventListener("click",()=>{
+
+  const gameList = document.getElementById("game-list");
+  const menu = document.getElementById("start-menu");
+  menu.classList.add("fade-out");
+  setTimeout(()=>{
+      gameList.style.display = "block";
+      menu.style.display = "none";
+  },1000);
+});
+
+
+document.getElementById("x").addEventListener("click",()=>{
+
+  location.reload();
 });

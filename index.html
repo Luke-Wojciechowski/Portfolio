@@ -15,11 +15,41 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 class="header-title">Łukasz Wojciechowski</h1>
+  <h1 class="header-title">Łukasz Wojciechowski  <button id="x">X</button></h1>
   <div id="start-menu">
-   
-    <button id="start-button" class="btn btn-dark">Start</button>
+  
+    <button id="start-button" class="btn btn-dark btn-start">PLAY</button>
+    <button id="show-list-button" class="btn btn-info btn-game-list">Show Game List</button>
   </div>
+  <div id="game-list" style="display:none;">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="./resource/img/crowdcity.avif">
+        <div class="caption">1</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./resource/img/crowdcity.avif" >
+        <div class="caption">2</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./resource/img/crowdcity.avif" >
+        <div class="caption">3</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./resource/img/crowdcity.avif" >
+        <div class="caption">4</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./resource/img/crowdcity.avif" >
+        <div class="caption">5</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./resource/img/crowdcity.avif">
+        <div class="caption">Gra edukacyjna</div>
+      </div>
+    </div>
+  </div>
+  
   <div id="game-container">
     <canvas id="gameCanvas"></canvas>
     <div id="game-info"></div>
