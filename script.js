@@ -188,7 +188,7 @@ const platformDefinitions = [
     image: './resource/img/maze.avif',
     title: 'Multi Maze 3D',
     description: 'Mine asteroids in space!',
-    platforms: ['PlayStation'],
+    platforms: ['Nintendo Switch'],
     screenshots: ['./resource/img/maze1.avif', './resource/img/maze2.avif']
   },
   {
@@ -717,39 +717,56 @@ const galleryGameData = {
   crowdcity: {
     title: "Crowd City",
     description: "A strategic city-building game where you manage resources and grow your population. Navigate through challenging scenarios and build the ultimate metropolis.",
+    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
     platforms: ["Nintendo Switch", "Mobile"],
     screenshots: ['./resource/img/crowdcity1.avif', './resource/img/crowdcity2.avif']
   },
   astrominer: {
     title: "Astro Miner",
     description: "Explore the vastness of space while mining valuable resources from asteroids. Upgrade your mining equipment and discover rare materials in this space adventure.",
+    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
     platforms: ["Steam", "Nintendo Switch"],
     screenshots: ['./resource/img/astrominer1.avif', './resource/img/astrominer2.avif']
   },
   bridgerace: {
     title: "Bridge Race",
     description: "Test your engineering skills in this puzzle game. Build bridges, solve complex challenges, and race against time to complete each level.",
+    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
     platforms: ["Nintendo Switch"],
     screenshots: ['./resource/img/bridgerace1.avif', './resource/img/bridgerace2.avif', './resource/img/bridgerace3.avif']
   },
   bucketcrusher: {
     title: "Bucket Crusher",
     description: "A physics-based puzzle game where you crush buckets and solve intricate mechanical challenges. Use strategy and timing to master each level.",
+    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
     platforms: ["Steam", "PlayStation", "Nintendo Switch"],
     screenshots: ['./resource/img/bucketcrusher1.avif', './resource/img/bucketcrusher2.avif']
   },
   brightside: {
     title: "Bright Side: Quiz",
     description: "An educational quiz game that challenges your knowledge across various subjects. Learn while having fun with interactive questions and engaging content.",
+    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
     platforms: ["PlayStation", "Xbox One", "Nintendo Switch"],
     screenshots: ['./resource/img/bridghtside1.avif', './resource/img/bridghtside2.avif', './resource/img/bridghtside3.avif']
   },
   shoppingmall: {
     title: "Shopping Mall Girl",
     description: "Experience the life of a shopping mall manager in this simulation game. Manage stores, satisfy customers, and build the most successful mall.",
+    contributions: "I designed the UI, created new game modes, implemented multiplayer features, and optimized the game for better performance.",
     platforms: ["Nintendo Switch"],
     screenshots: ['./resource/img/shoppingmall1.avif', './resource/img/shoppingmall2.avif', './resource/img/shoppingmall3.avif']
   }
+};
+
+// Platform icon mapping for gallery
+const platformIconMap = {
+  'Nintendo Switch': '<img src="./resource/img/nintendo-switch2.png" alt="Nintendo Switch" title="Nintendo Switch" style="height:32px;vertical-align:middle;">',
+  'PlayStation': '<img src="https://cdn.simpleicons.org/playstation/000000/ffffff" alt="PlayStation" title="PlayStation" style="height:32px;vertical-align:middle;">',
+  'Steam': '<img src="https://cdn.simpleicons.org/steam/000000/ffffff" alt="Steam" title="Steam" style="height:32px;vertical-align:middle;">',
+  'Xbox One': '<img src="./resource/img/xbox-logo.png" alt="Xbox" title="Xbox" style="height:32px;vertical-align:middle;">',
+  'PC': '<i class="fa fa-desktop fa-2x" title="PC"></i>',
+  'Mobile': '<i class="fa-solid fa-mobile-screen fa-2x" title="Mobile"></i>',
+  'Microsoft Store': '<i class="fa-brands fa-windows fa-2x" title="Microsoft Store"></i>',
 };
 
 // Gallery game info functions
@@ -765,15 +782,15 @@ function showGalleryGameInfo(gameKey) {
 
   // Set title and description
   titleElement.textContent = gameData.title;
-  descriptionElement.textContent = gameData.description;
+  descriptionElement.innerHTML = `${gameData.description}<br><br><span class='gallery-contributions'>${gameData.contributions || ''}</span>`;
 
-  // Set platforms
-  platformsElement.innerHTML = gameData.platforms.map(platform => 
-    `<span class="platform-tag">${platform}</span>`
+  // Set platforms as icons
+  platformsElement.innerHTML = gameData.platforms.map(platform =>
+    `<span class="platform-tag">${platformIconMap[platform] || platform}</span>`
   ).join('');
 
   // Set screenshots
-  screenshotsElement.innerHTML = gameData.screenshots.map(screenshot => 
+  screenshotsElement.innerHTML = gameData.screenshots.map(screenshot =>
     `<img src="${screenshot}" alt="Screenshot" class="gallery-screenshot">`
   ).join('');
 
