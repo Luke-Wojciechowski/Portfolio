@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 class="header-title">Łukasz Wojciechowski  <button id="x">X</button></h1>
+  <h1 class="header-title"> <button id="x">X</button> Łukasz Wojciechowski</h1>
   <div id="start-menu">
   
     <button id="start-button" class="btn btn-dark btn-start">PLAY</button>
@@ -23,29 +23,43 @@
   </div>
   <div id="game-list" style="display:none;">
     <div class="gallery">
-      <div class="gallery-item">
+      <div class="gallery-item" data-game="crowdcity">
         <img src="./resource/img/crowdcity.avif">
-        <div class="caption">1</div>
+        <div class="caption">Crowd City</div>
       </div>
-      <div class="gallery-item">
-        <img src="./resource/img/crowdcity.avif" >
-        <div class="caption">2</div>
+      <div class="gallery-item" data-game="astrominer">
+        <img src="./resource/img/astrominer.jpg" >
+        <div class="caption">Astro Miner</div>
       </div>
-      <div class="gallery-item">
-        <img src="./resource/img/crowdcity.avif" >
-        <div class="caption">3</div>
+      <div class="gallery-item" data-game="bridgerace">
+        <img src="./resource/img/bridgerace.avif" >
+        <div class="caption">Bridge Race</div>
       </div>
-      <div class="gallery-item">
-        <img src="./resource/img/crowdcity.avif" >
-        <div class="caption">4</div>
+      <div class="gallery-item" data-game="bucketcrusher">
+        <img src="./resource/img/bucketcrusher.avif" >
+        <div class="caption">Bucket Crusher</div>
       </div>
-      <div class="gallery-item">
-        <img src="./resource/img/crowdcity.avif" >
-        <div class="caption">5</div>
+      <div class="gallery-item" data-game="brightside">
+        <img src="./resource/img/bridghtside.avif" >
+        <div class="caption">Bright Side: Quiz</div>
       </div>
-      <div class="gallery-item">
-        <img src="./resource/img/crowdcity.avif">
-        <div class="caption">Gra edukacyjna</div>
+      <div class="gallery-item" data-game="shoppingmall">
+        <img src="./resource/img/shoppingmall.avif">
+        <div class="caption">Shopping Mall Girl</div>
+      </div>
+    </div>
+    <div id="gallery-game-info" style="display:none;">
+      <div class="gallery-info-content">
+        <button class="close-gallery-info">×</button>
+        <div class="gallery-info-header">
+          <h2 class="gallery-game-title"></h2>
+          <p class="gallery-game-description"></p>
+        </div>
+        <div class="gallery-platforms">
+          <h4>Platforms:</h4>
+          <div class="platform-tags"></div>
+        </div>
+        <div class="gallery-screenshots"></div>
       </div>
     </div>
   </div>

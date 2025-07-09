@@ -696,15 +696,135 @@ document.getElementById("show-list-button").addEventListener("click",()=>{
 
   const gameList = document.getElementById("game-list");
   const menu = document.getElementById("start-menu");
-  menu.classList.add("fade-out");
+  const game = document.getElementById("game-container");
+
+  //menu.classList.add("fade-out");
   setTimeout(()=>{
       gameList.style.display = "block";
       menu.style.display = "none";
-  },1000);
+      game.style.display = "none";
+  },100);
 });
 
 
 document.getElementById("x").addEventListener("click",()=>{
 
   location.reload();
+});
+
+// Gallery Game Info System - Separate from the main game info
+const galleryGameData = {
+  crowdcity: {
+    title: "Crowd City",
+    description: "A strategic city-building game where you manage resources and grow your population. Navigate through challenging scenarios and build the ultimate metropolis.",
+    platforms: ["Nintendo Switch", "Mobile"],
+    screenshots: ['./resource/img/crowdcity1.avif', './resource/img/crowdcity2.avif']
+  },
+  astrominer: {
+    title: "Astro Miner",
+    description: "Explore the vastness of space while mining valuable resources from asteroids. Upgrade your mining equipment and discover rare materials in this space adventure.",
+    platforms: ["Steam", "Nintendo Switch"],
+    screenshots: ['./resource/img/astrominer1.avif', './resource/img/astrominer2.avif']
+  },
+  bridgerace: {
+    title: "Bridge Race",
+    description: "Test your engineering skills in this puzzle game. Build bridges, solve complex challenges, and race against time to complete each level.",
+    platforms: ["Nintendo Switch"],
+    screenshots: ['./resource/img/bridgerace1.avif', './resource/img/bridgerace2.avif', './resource/img/bridgerace3.avif']
+  },
+  bucketcrusher: {
+    title: "Bucket Crusher",
+    description: "A physics-based puzzle game where you crush buckets and solve intricate mechanical challenges. Use strategy and timing to master each level.",
+    platforms: ["Steam", "PlayStation", "Nintendo Switch"],
+    screenshots: ['./resource/img/bucketcrusher1.avif', './resource/img/bucketcrusher2.avif']
+  },
+  brightside: {
+    title: "Bright Side: Quiz",
+    description: "An educational quiz game that challenges your knowledge across various subjects. Learn while having fun with interactive questions and engaging content.",
+    platforms: ["PlayStation", "Xbox One", "Nintendo Switch"],
+    screenshots: ['./resource/img/bridghtside1.avif', './resource/img/bridghtside2.avif', './resource/img/bridghtside3.avif']
+  },
+  shoppingmall: {
+    title: "Shopping Mall Girl",
+    description: "Experience the life of a shopping mall manager in this simulation game. Manage stores, satisfy customers, and build the most successful mall.",
+    platforms: ["Nintendo Switch"],
+    screenshots: ['./resource/img/shoppingmall1.avif', './resource/img/shoppingmall2.avif', './resource/img/shoppingmall3.avif']
+  }
+};
+
+// Gallery game info functions
+function showGalleryGameInfo(gameKey) {
+  const gameData = galleryGameData[gameKey];
+  if (!gameData) return;
+
+  const infoContainer = document.getElementById('gallery-game-info');
+  const titleElement = infoContainer.querySelector('.gallery-game-title');
+  const descriptionElement = infoContainer.querySelector('.gallery-game-description');
+  const platformsElement = infoContainer.querySelector('.platform-tags');
+  const screenshotsElement = infoContainer.querySelector('.gallery-screenshots');
+
+  // Set title and description
+  titleElement.textContent = gameData.title;
+  descriptionElement.textContent = gameData.description;
+
+  // Set platforms
+  platformsElement.innerHTML = gameData.platforms.map(platform => 
+    `<span class="platform-tag">${platform}</span>`
+  ).join('');
+
+  // Set screenshots
+  screenshotsElement.innerHTML = gameData.screenshots.map(screenshot => 
+    `<img src="${screenshot}" alt="Screenshot" class="gallery-screenshot">`
+  ).join('');
+
+  // Show the modal
+  infoContainer.style.display = 'flex';
+  setTimeout(() => {
+    infoContainer.classList.add('show');
+  }, 10);
+}
+
+function hideGalleryGameInfo() {
+  const infoContainer = document.getElementById('gallery-game-info');
+  infoContainer.classList.remove('show');
+  setTimeout(() => {
+    infoContainer.style.display = 'none';
+  }, 300);
+}
+
+// Add event listeners for gallery items
+document.addEventListener('DOMContentLoaded', function() {
+  // Gallery item click handlers
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  galleryItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const gameKey = this.getAttribute('data-game');
+      if (gameKey && galleryGameData[gameKey]) {
+        showGalleryGameInfo(gameKey);
+      }
+    });
+  });
+
+  // Close button handler
+  const closeButton = document.querySelector('.close-gallery-info');
+  if (closeButton) {
+    closeButton.addEventListener('click', hideGalleryGameInfo);
+  }
+
+  // Close on background click
+  const infoContainer = document.getElementById('gallery-game-info');
+  if (infoContainer) {
+    infoContainer.addEventListener('click', function(e) {
+      if (e.target === this) {
+        hideGalleryGameInfo();
+      }
+    });
+  }
+
+  // Close on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      hideGalleryGameInfo();
+    }
+  });
 });
