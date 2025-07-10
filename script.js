@@ -616,6 +616,64 @@ function hideInfo() {
   document.getElementById("game-info").style.display = "none";
 }
 
+// Remove floating HTML div logic for platform icons
+// Add canvas-based icon rendering
+let platformIconsAlpha = 0;
+let lastPlatformForIcons = null;
+
+function drawPlatformIconsCanvas(platform) {
+  if (!platform || !platform.platforms) return;
+  const icons = platform.platforms.map(p => platformIconMap[p] || p);
+  const iconSize = 36;
+  const gap = 36;
+  const totalWidth = icons.length * iconSize + (icons.length - 1) * gap;
+  const baseX = platform.x + platform.w / 2 - totalWidth / 2;
+  const y = platform.y + platform.h + 18;
+  icons.forEach((icon, i) => {
+    const x = baseX + i * (iconSize + gap);
+    // Draw background
+    ctx.save();
+    ctx.globalAlpha = platformIconsAlpha;
+    ctx.beginPath();
+    ctx.arc(x + iconSize/2, y + iconSize/2, iconSize/2 + 10, 0, 2 * Math.PI);
+    ctx.fillStyle = 'rgba(255,255,255,0.85)';
+    ctx.shadowColor = '#2196f3';
+    ctx.shadowBlur = 8;
+    ctx.fill();
+    ctx.restore();
+    // Draw icon (as image or font)
+    ctx.save();
+    ctx.globalAlpha = platformIconsAlpha;
+    if (icon.startsWith('<img')) {
+      // Extract src from img tag
+      const srcMatch = icon.match(/src=["']([^"']+)["']/);
+      if (srcMatch) {
+        const imgSrc = srcMatch[1];
+        let img = imageCache[imgSrc];
+        if (!img) {
+          img = new window.Image();
+          img.src = imgSrc;
+          imageCache[imgSrc] = img;
+        }
+        if (img.complete && img.naturalWidth !== 0) {
+          ctx.drawImage(img, x, y, iconSize, iconSize);
+        }
+      }
+    } else {
+      // Draw font icon (fallback)
+      ctx.font = '32px Orbitron, Arial, sans-serif';
+      ctx.fillStyle = '#23232e';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(icon.replace(/<[^>]+>/g, ''), x + iconSize/2, y + iconSize/2);
+    }
+    ctx.restore();
+  });
+}
+
+function hidePlatformIcons() {
+  // This function is no longer needed as icons are drawn directly
+}
 
 function update(deltaTime) {
   if (keys["ArrowLeft"] || keys["a"] || keys["A"]) player.vx -= moveSpeed * deltaTime;
@@ -656,8 +714,19 @@ function update(deltaTime) {
   // Show info if standing on a platform
   if (standingPlatform) {
     showInfo(standingPlatform);
+    if (lastPlatformForIcons !== standingPlatform) {
+      lastPlatformForIcons = standingPlatform;
+    }
+    // Fade in
+    platformIconsAlpha += (1 - platformIconsAlpha) * 0.15;
   } else {
     hideInfo();
+    // Fade out
+    platformIconsAlpha += (0 - platformIconsAlpha) * 0.15;
+    if (platformIconsAlpha < 0.01) {
+      lastPlatformForIcons = null;
+      platformIconsAlpha = 0;
+    }
   }
 
   // follow player
@@ -697,6 +766,10 @@ function draw() {
   drawPlatforms();
   drawParticles();
   drawPlayer();
+  // Draw platform icons under the current platform
+  if (lastPlatformForIcons && platformIconsAlpha > 0.01) {
+    drawPlatformIconsCanvas(lastPlatformForIcons);
+  }
   ctx.restore();
 }
 
@@ -1002,7 +1075,8 @@ const platformIconMap = {
   'PC': '<i class="fa fa-desktop fa-2x" title="PC" style="color:#000;"></i>',
   'Mobile': '<i class="fa-solid fa-mobile-screen fa-2x" title="Mobile"></i>',
   'Microsoft Store': '<i class="fa-brands fa-windows fa-2x" title="Microsoft Store"></i>',
-  'WebGL': '<img src="./resource/img/webgl.svg" alt="WebGL" title="WebGL" style="height:32px;vertical-align:middle;">'
+  'WebGL': '<img src="./resource/img/webgl.svg" alt="WebGL" title="WebGL" style="height:32px;vertical-align:middle;">',
+  'Poland': '<img src="./resource/img/poland.png" alt="WebGL" title="WebGL" style="height:32px;vertical-align:middle;">'
 };
 
 // Gallery game info functions

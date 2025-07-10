@@ -303,6 +303,35 @@ html, body {
   transform: scale(1.05);
 }
 
+#platform-icons-float {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 20;
+  display: none;
+  transition: opacity 0.5s cubic-bezier(.4,0,.2,1);
+  opacity: 0;
+}
+#platform-icons-float.visible {
+  display: flex;
+  opacity: 1;
+}
+#platform-icons-float .platform-icon-item {
+  margin: 0 10px;
+  background: rgba(30,30,30,0.92);
+  border-radius: 12px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 12px #0005;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  transition: background 0.2s;
+}
+#platform-icons-float .platform-icon-item:hover {
+  background: #2196f3;
+}
+
 
 @media (max-width: 768px) {
   .gallery {
