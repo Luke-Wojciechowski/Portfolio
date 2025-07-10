@@ -33,7 +33,7 @@ const platformDefinitions = [
     h: 60,
     image: './resource/img/start.png',
     title: 'Łukasz Wojciechowski',
-    description: 'This is the starting platform.',
+    description: 'About me',
     platforms: ['Poland'],
     contributions: "",
     screenshots: []
@@ -594,13 +594,19 @@ function showInfo(game) {
   const info = document.getElementById("game-info");
   let screenshotsHTML = '';
   if (game.screenshots && game.screenshots.length > 0) {
-    screenshotsHTML = `<div style="display:flex;gap:8px;margin:8px 0;justify-content:center;align-items:center;">` +
-      game.screenshots.slice(0,3).map(src => `<img src='${src}' style='height:120px;max-width:28vw;width:auto;flex:1 1 0;border-radius:6px;box-shadow:0 2px 8px #0002;object-fit:contain;border:3px solid #ffffff;'>`).join('') +
-      `</div>`;
+    screenshotsHTML = `<div style="display:table;margin:0 auto;"><div style=\"display:flex;gap:36px;justify-content:center;align-items:center;\">` +
+      game.screenshots.slice(0,3).map(src => `<img src='${src}' style='height:120px;width:auto;max-width:180px;object-fit:cover;flex:1 1 0;border-radius:6px;box-shadow:0 2px 8px #0002;border:2px solid #ffffff;'>`).join('') +
+      `</div></div>`;
+  }
+  let contributionsHTML = '';
+  if (game.contributions && game.contributions.trim() !== '') {
+    contributionsHTML = `<p class='game-contributions'>${game.contributions}</p>`;
   }
   info.innerHTML = `
-    <h3>${game.title}</h3>
-    <p><strong>Platforms:</strong> ${game.platforms.join(', ')}</p>
+    <h3><strong>${game.title}</strong></h3>
+    <p>${game.description || ''}</p>
+    ${contributionsHTML}
+    <p><strong>Platforms:</strong> ${game.platforms ? game.platforms.join(', ') : ''}</p>
     ${screenshotsHTML}
   `;
   info.style.display = "block";
